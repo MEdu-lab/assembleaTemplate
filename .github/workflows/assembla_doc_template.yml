@@ -28,17 +28,8 @@ jobs:
         
         # Download in parallelo (background jobs)
         PANDOC_VERSION=3.8.2
-        PANDOC_XREF_VERSION=0.3.22        
         wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb &
-        PANDOC_PID=$!
-        wget https://github.com/lierdakil/pandoc-crossref/releases/download/v${PANDOC_XREF_VERSION}/pandoc-crossref-Linux-X64.tar.xz &
-        CROSSREF_PID=$!        
-        # Aspetta che i download finiscano
-        wait $PANDOC_PID
-        wait $CROSSREF_PID        
         apt-get install -y ./pandoc-${PANDOC_VERSION}-1-amd64.deb
-        tar -xJf pandoc-crossref-Linux-X64.tar.xz
-        mv pandoc-crossref /usr/local/bin/
         rm pandoc-${PANDOC_VERSION}-1-amd64.deb pandoc-crossref-Linux-X64.tar.xz
         # Verifica
         fc-cache -f -v
@@ -46,39 +37,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Read font from config.yaml
-      id: read_font
-      run: |
-        FONT=$(python3 .github/scripts/get_font.py)
-        echo "FONT=$FONT" >> $GITHUB_ENV
-
-    - name: Install Microsoft Core Fonts (including Arial)
-      if: env.FONT == 'arial'
-      run: |
-        apt-get update
-        # Accetta automaticamente la licenza EULA dei Microsoft fonts
-        echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
-        apt-get install -y ttf-mscorefonts-installer fontconfig
-        # Aggiorna la cache dei font per renderli disponibili subito
-        fc-cache -f
-
-    - name: Extract metadata & concatenate markdown
-      run: |
-        rm -f README.md *.pdf        
-        python3 .github/scripts/build-tesina.py
-
-    - name: Generate config_fonts.tex
-      id: generate_font
-      run: |
-        # Esegui lo script Python che legge config.yaml e genera config_fonts.tex
-        python3 .github/scripts/tmpTeXFont.py
-
     - name: Build PDF with Pandoc
       run: |
         TITLE=$(grep '^title:' metadata.yaml | cut -d':' -f2- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//; s/[*]//g')
         SAFE_TITLE=$(echo "$TITLE" | tr ' ' '_' | tr -cd '[:alnum:]_')
         TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-        PDF_NAME="${SAFE_TITLE}-CONSAQ-${TIMESTAMP}.pdf"
+        PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
         pandoc --defaults styles/defaults.yml README.md -o "$PDF_NAME"
         echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
         mkdir -p pages_artifact
