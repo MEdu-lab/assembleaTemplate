@@ -5,12 +5,7 @@ pdf-engine: xelatex
 
 metadata-file:
   - metadata.yaml
-  - bibliography.yaml
 
 template: styles/template.latex
 
 syntax-highlighting: tango
-
-filters:
-  - pandoc-crossref
-  - styles/multibib.lua
