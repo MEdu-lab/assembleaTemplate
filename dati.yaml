@@ -1,0 +1,80 @@
+---
+# ============================================
+# METADATI PRINCIPALI DEL VERBALE
+# ============================================
+
+titolo: "Verbale Assemblea Ordinaria n. 5/2024"
+
+# Data spezzettata per il template legale
+data: "15 marzo 2024"
+data-anno: "2024"
+data-giorno: "15"
+data-mese: "marzo"
+
+# Orari
+ora_inizio: "15:00"
+ora_fine: "18:30"
+
+# Luogo e organizzazione
+luogo: "Sede Associazione Culturale XYZ, Via Roma 42, Milano"
+tipo_riunione: "Assemblea Ordinaria"
+associazione: "Associazione Culturale XYZ"
+
+# Cariche
+presidente: "Mario Rossi"
+segretario: "Giuseppe Verdi"
+
+# Data verbale precedente (per approvazione)
+data_precedente: "28 febbraio 2024"
+
+# ============================================
+# PARTECIPANTI
+# ============================================
+
+presenti:
+  - Mario Rossi (Presidente)
+  - Giuseppe Verdi (Segretario)
+  - Anna Bianchi (Consigliere)
+  - Marco Ferrari (Consigliere)
+  - Laura Esposito (Consigliere)
+  - Roberto Marino (Consigliere)
+  - Chiara Colombo (Consigliere)
+
+assenti:
+  - Luca Neri (Consigliere - giustificato per malattia)
+  - Silvia Gallo (Consigliere - giustificato per impegni lavorativi)
+
+# ============================================
+# ORDINE DEL GIORNO
+# ============================================
+
+ordine_del_giorno:
+  - "Approvazione verbale seduta precedente del 28 febbraio 2024"
+  - "Relazione del Presidente sull'attività svolta nel primo trimestre 2024"
+  - "Proposta organizzazione evento culturale 'Festa della Primavera'"
+  - "Varie ed eventuali"
+
+# ============================================
+# ESITO VOTAZIONI (punto 4.3)
+# ============================================
+
+n_favorevoli: 6
+n_contrari: 0
+n_astenuti: 1
+
+# Dettagli evento approvato (per delibera)
+evento_titolo: "Festa della Primavera 2024"
+evento_data: "21 aprile 2024"
+evento_luogo: "Giardini Pubblici di Milano"
+evento_budget: 2500
+
+# ============================================
+# VARIABILI TEMPLATE LATEX (opzionali)
+# ============================================
+
+# Queste vengono usate se presenti nel template.latex
+documentclass: article
+fontsize: 11pt
+geometry: margin=2.5cm
+lang: it-IT
+---
