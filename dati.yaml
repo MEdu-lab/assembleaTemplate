@@ -14,9 +14,9 @@ segretario: "Giuseppe Verdi"
 
 # LISTE PRE-FORMATTATE come stringhe (Mustache non fa loop!)
 presenti: |
-  - Mario Rossi (Presidente)
-  - Giuseppe Verdi (Segretario)
-  - Anna Bianchi (Consigliere)
+  - Marco di Gasbarro (Presidente)
+  - Giulio De Mattia (Segretario)
+  - Pietro Barale (Consigliere)
   - Marco Ferrari (Consigliere)
 
 assenti: |
