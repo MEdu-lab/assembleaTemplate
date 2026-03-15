@@ -44,6 +44,8 @@ jobs:
         TIMESTAMP=$(date +%Y%m%d_%H%M%S)
         PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
         pandoc --defaults styles/defaults.yml README.md -o "$PDF_NAME"
+        echo "PDF_NAME=$PDF_NAME"
+        ls -al
         echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
         mkdir -p pages_artifact
         cp "${PDF_NAME}" pages_artifact/latest.pdf
