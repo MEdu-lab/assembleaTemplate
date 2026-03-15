@@ -3,9 +3,10 @@ to: pdf
 
 pdf-engine: xelatex
 
-metadata-file:
-  - ./styles/metadata.yaml
-
 template: styles/template.latex
 
-syntax-highlighting: tango
+variables:
+  documentclass: article
+  fontsize: 11pt
+  geometry: margin=2.5cm
+  mustache: styles/dati.yaml
