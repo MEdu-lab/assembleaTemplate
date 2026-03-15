@@ -3,4 +3,4 @@ fontsize: 10pt
 mainfont:
 sansfont:
 monofont:
-mustache: ./dati.yaml
+mustache: ./styles/dati.yaml
