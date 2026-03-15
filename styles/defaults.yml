@@ -4,7 +4,9 @@ to: pdf
 pdf-engine: xelatex
 
 template: styles/template.latex
-
+metadata-file:
+  - dati.yaml
+  
 variables:
   documentclass: article
   fontsize: 11pt
