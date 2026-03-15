@@ -4,6 +4,9 @@ to: pdf
 pdf-engine: xelatex
 
 template: styles/template.latex
+
+filters:
+  - pandoc-mustache
   
 variables:
   documentclass: article
