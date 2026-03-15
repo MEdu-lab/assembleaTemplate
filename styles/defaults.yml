@@ -9,4 +9,4 @@ variables:
   documentclass: article
   fontsize: 11pt
   geometry: margin=2.5cm
-  mustache: styles/dati.yaml
+  mustache: dati.yaml
