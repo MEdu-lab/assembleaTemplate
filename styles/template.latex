@@ -41,22 +41,8 @@ $endfor$
 \usepackage{fontspec}
 \usepackage{etoolbox}
 
-% Importa configurazione font esterna
-\input{styles/config_fonts.tex}
-
 % Default font
 \newcommand{\defaultfont}{Liberation Sans}
-
-% Scelta font in base alla variabile \chosenfont
-\ifdefstring{\chosenfont}{arial}{
-    \setmainfont{Arial}
-    \setsansfont{Arial}
-    \setmonofont{Arial}
-}{
-    \setmainfont{\defaultfont}
-    \setsansfont{\defaultfont}
-    \setmonofont{Liberation Mono}
-}
 
 \renewcommand{\familydefault}{\sfdefault}
 
