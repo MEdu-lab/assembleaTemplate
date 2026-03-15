@@ -13,9 +13,11 @@ La riunione è stata regolarmente convocata nei modi previsti dallo statuto.
 ## 2. Partecipanti
 
 **Risultano presenti:**
+
 {{presenti}}
 
 **Risultano assenti:**
+
 {{assenti}}
 
 Assume la presidenza il Sig. **{{presidente}}**, che invita il Sig. **{{segretario}}** a svolgere le funzioni di segretario verbalizzante.
