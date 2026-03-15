@@ -12,33 +12,33 @@ associazione: "Associazione Culturale XYZ"
 presidente: "Mario Rossi"
 segretario: "Giuseppe Verdi"
 
-# Array per i loop Pandoc
-presenti:
+# LISTE PRE-FORMATTATE come stringhe (Mustache non fa loop!)
+presenti: |
   - Mario Rossi (Presidente)
   - Giuseppe Verdi (Segretario)
   - Anna Bianchi (Consigliere)
   - Marco Ferrari (Consigliere)
 
-assenti:
+assenti: |
   - Luca Neri (Consigliere - malattia)
   - Silvia Gallo (Consigliere - lavoro)
 
-# Array con indice numerico automatico
-ordine_del_giorno:
-  - "Approvazione verbale precedente"
-  - "Relazione del Presidente"
-  - "Proposta evento culturale"
-  - "Varie ed eventuali"
+# ODG pre-formattato con numeri
+ordine_del_giorno: |
+  1. Approvazione verbale precedente
+  2. Relazione del Presidente
+  3. Proposta evento culturale
+  4. Varie ed eventuali
 
-# Singoli punti ODG per riferimento
+# Singoli punti ODG per riferimento nei paragrafi
 odg1: "Approvazione verbale precedente"
 odg2: "Relazione del Presidente"
 odg3: "Proposta evento culturale"
 odg4: "Varie ed eventuali"
 
-n_favorevoli: 4
-n_contrari: 0
-n_astenuti: 0
+n_favorevoli: "4"
+n_contrari: "0"
+n_astenuti: "0"
 
 delibera_testo: "la realizzazione dell'evento 'Festa della Primavera'"
 ---
