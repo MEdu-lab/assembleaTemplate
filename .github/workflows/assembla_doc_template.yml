@@ -40,16 +40,17 @@ jobs:
 
     - name: Build PDF with Pandoc
       run: |
-        TITLE=$(grep '^titolo:' metadata.yaml | cut -d':' -f2- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//; s/[*]//g')
-        SAFE_TITLE=$(echo "$TITLE" | tr ' ' '_' | tr -cd '[:alnum:]_')
-        TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-        PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
+        #TITLE=$(grep '^titolo:' docs/dati.yaml | cut -d':' -f2- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//; s/[*]//g')
+        #SAFE_TITLE=$(echo "$TITLE" | tr ' ' '_' | tr -cd '[:alnum:]_')
+        #TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+        #PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
         rm -rf README.md
         cp docs/ASSEMBLEA.md README.md
-        pandoc --defaults styles/defaults.yml README.md -o "$PDF_NAME"
-        echo "PDF_NAME=$PDF_NAME"
+        pandoc --defaults styles/defaults.yml README.md -o verbale-assemblea.pdf #"$PDF_NAME"
+        #echo "PDF_NAME=$PDF_NAME"
         ls -al
-        echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
+        #echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
+        echo "PDF_NAME=verbale-assemblea.pdf" >> $GITHUB_ENV
         mkdir -p pages_artifact
         cp "${PDF_NAME}" pages_artifact/latest.pdf
         
