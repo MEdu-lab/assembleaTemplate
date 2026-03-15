@@ -1,32 +1,6 @@
-titolo: "Verbale {{tipo_riunione}} del {{data}}"
-associazione: "{{associazione}}"
-tipo_riunione: "Consiglio Direttivo"
-numero_verbale: "{{numero}}/{{data | date: '%Y'}}"
-data: "{{data}}"
-ora_inizio: "{{ora_inizio}}"
-ora_fine: ""  # da compilare dopo
-luogo: "{{luogo}}"
-convocazione: "seconda"
-presidente: "{{presidente}}"
-segretario: "{{segretario}}"
-presenti:
-  - "Mario Rossi (Presidente)"
-  - "Laura Bianchi (Segretario)"
-assenti:
-  - "Anna Neri (giustificata)"
-ordine_del_giorno:
-  - "Approvazione verbale seduta precedente"
-  - "Comunicazioni del Presidente"
-  - "Organizzazione evento [titolo evento]"
-  - "Varie ed eventuali"
-allegati: []
-quorum_costitutivo: "50%+1"
-quorum_deliberativo: "maggioranza semplice"
-n_soci_totali: 50
-n_soci_presenti: 35
-n_soci_deleghe: 5
 documentclass: article
 fontsize: 10pt
 mainfont:
 sansfont:
 monofont:
+mustache: ./dati.yaml
