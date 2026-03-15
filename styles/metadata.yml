@@ -1,0 +1,6 @@
+documentclass: article
+fontsize: 10pt
+mainfont:
+sansfont:
+monofont:
+mustache: ./dati.yaml
