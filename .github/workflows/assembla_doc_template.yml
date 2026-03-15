@@ -30,7 +30,7 @@ jobs:
         PANDOC_VERSION=3.8.2
         wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb &
         apt-get install -y ./pandoc-${PANDOC_VERSION}-1-amd64.deb
-        rm pandoc-${PANDOC_VERSION}-1-amd64.deb pandoc-crossref-Linux-X64.tar.xz
+        rm pandoc-${PANDOC_VERSION}-1-amd64.deb
         # Verifica
         fc-cache -f -v
      
