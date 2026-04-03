@@ -1,43 +1,104 @@
----
-titolo: "Verbale Assemblea Ordinaria n. 5/2024"
+# ============================================================
+# DATI DELLA RIUNIONE
+# ============================================================
+titolo: "Verbale Assemblea Straordinaria n. 1/2024"
 data: "15 marzo 2024"
 data-anno: "2024"
 data-giorno: "15"
 data-mese: "marzo"
 ora_inizio: "15:00"
-ora_fine: "18:30"
-luogo: "Sede Associazione Culturale XYZ"
-tipo_riunione: "Assemblea Ordinaria"
-associazione: "Associazione Culturale MEduLab"
-presidente: "Mario Rossi"
-segretario: "Giuseppe Verdi"
+ora_fine: "18:00"
+luogo: "Sede dell'associazione"
+tipo_riunione: "Assemblea Straordinaria"
+convocazione: "Prima convocazione"  # oppure: "Seconda convocazione"
 
-# LISTE PRE-FORMATTATE come stringhe (Mustache non fa loop!)
+# ============================================================
+# ASSOCIAZIONE
+# ============================================================
+associazione: "Associazione Culturale MEduLab"
+vecchia_denominazione: "Associazione Culturale MEduLab"
+nuova_denominazione: "Associazione Culturale NuovoNome ETS"
+
+# ============================================================
+# PRESIDENTE E SEGRETARIO DELL'ASSEMBLEA
+# (chi conduce i lavori oggi, non le cariche del nuovo CDA)
+# ============================================================
+presidente_assemblea: "Mario Rossi"
+segretario_assemblea: "Giuseppe Verdi"
+
+# ============================================================
+# PARTECIPANTI E VERIFICA QUORUM
+# ============================================================
+n_soci_totale: "10"
+n_presenti: "7"
+n_deleghe: "1"
+n_aventi_diritto_voto: "8"
+quorum_richiesto: "metà più uno degli aventi diritto al voto (6 su 10)"
+
 presenti: |
-  - Marco di Gasbarro (Presidente)
-  - Giulio De Mattia (Segretario)
+  - Mario Rossi
+  - Giuseppe Verdi
+  - Pietro Barale
+  - Marco Ferrari
+  - Anna Bianchi
+  - Carlo Esposito
+  - Francesca Lombardi (con delega di Roberto Mancini)
+
+assenti: |
+  - Roberto Mancini (delegante Francesca Lombardi)
+  - Sara Conti (giustificata)
+  - Luca Neri (ingiustificato)
+
+# ============================================================
+# ORDINE DEL GIORNO
+# ============================================================
+ordine_del_giorno: |
+  1. Presa d'atto della cessazione del Consiglio Direttivo in carica
+  2. Elezione del nuovo Consiglio Direttivo
+  3. Attribuzione delle cariche interne al nuovo Consiglio Direttivo
+  4. Modifica della denominazione sociale
+  5. Approvazione del nuovo statuto sociale
+  6. Varie ed eventuali
+
+# ============================================================
+# CESSAZIONE VECCHIO CONSIGLIO DIRETTIVO
+# ============================================================
+motivo_cessazione: "dimissioni volontarie"  # oppure: "scadenza del mandato" / "revoca"
+data_dimissioni: "1 marzo 2024"
+
+vecchio_consiglio: |
+  - Mario Rossi (Presidente)
+  - Giuseppe Verdi (Segretario)
+  - Luca Neri (Tesoriere)
   - Pietro Barale (Consigliere)
   - Marco Ferrari (Consigliere)
 
-assenti: |
-  - Luca Neri (Consigliere - malattia)
-  - Silvia Gallo (Consigliere - lavoro)
+# ============================================================
+# ELEZIONE NUOVO CONSIGLIO DIRETTIVO
+# ============================================================
+candidati_consiglio: |
+  - Anna Bianchi
+  - Carlo Esposito
+  - Francesca Lombardi
+  - Roberto Mancini
+  - Sara Conti
 
-# ODG pre-formattato con numeri
-ordine_del_giorno: |
-  1. Approvazione verbale precedente
-  2. Relazione del Presidente
-  3. Proposta evento culturale
-  4. Varie ed eventuali
+nuovo_consiglio_eletto: |
+  - Anna Bianchi
+  - Carlo Esposito
+  - Francesca Lombardi
+  - Roberto Mancini
+  - Sara Conti
 
-# Singoli punti ODG per riferimento nei paragrafi
-odg1: "Approvazione verbale precedente"
-odg2: "Relazione del Presidente"
-odg3: "Proposta evento culturale"
-odg4: "Varie ed eventuali"
+# ============================================================
+# ATTRIBUZIONE CARICHE NUOVO CONSIGLIO DIRETTIVO
+# ============================================================
+nuovo_presidente: "Anna Bianchi"
+nuovo_segretario: "Carlo Esposito"
+nuovo_tesoriere: "Francesca Lombardi"
 
-n_favorevoli: "4"
-n_contrari: "0"
-n_astenuti: "0"
-
-delibera_testo: "la realizzazione dell'evento 'Festa della Primavera'"
+# ============================================================
+# STATUTO
+# ============================================================
+riferimento_statuto: "allegato sub A al presente verbale"
+data_efficacia: "dalla data della presente assemblea"
